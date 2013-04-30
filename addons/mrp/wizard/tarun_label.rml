@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+	<document filename="Large_Label.pdf">
+
+  		<template pageSize="(6in,4in)" leftMargin="0.1in" rightMargin="0.1in" topMargin="0.1cm" bottomMargin="0.1cm" title="Large_Label" author="PMI India (sales@primarymodules.com)" allowSplitting="20" showBoundary="1">
+    		<pageTemplate id="first">
+	 			<frame id="first" x1="0.1in" y1="0.1in" width="5.8in" height="3.8in"/>
+	 				<pageGraphics>     				
+	    				<rotate degrees="-90"/>
+							<place x="-3.7in" y="3.9in" width="4in" height="2in">
+		 						<blockTable colWidths="9.5cm">
+      		 						<tr alignment="CENTER">
+		 								<td alignment="CENTER">
+		  									<para style="Loop_Block">[[repeatIn(objects,'o')]]</para>
+		  								
+											<para style="Loop_Block"><strong> </strong></para>
+											<barCode code="code128" quiet="9" fontName="Helvetica-Bold" fontSize="11" alignment="CENTER" barHeight="30" barWidth="1.6">[[ (o.serial and o.serial) or '' ]]</barCode>
+		      								
+                						</td>
+									</tr>
+								</blockTable>
+							</place>
+							<place x="-3.7in" y="-1.0in" width="4in" height="2in">
+		 						<blockTable colWidths="9.5cm">
+      		 						<tr alignment="CENTER">
+		 								<td alignment="CENTER">
+		  									<para style="Loop_Block">[[repeatIn(objects,'o')]] </para>
+		  					
+											<para style="Field_value"><strong> </strong></para>
+											<barCode code="code128" quiet="9" fontName="Helvetica-Bold" fontSize="11" alignment="CENTER" barHeight="30" barWidth="1.6">[[ (o.serial and o.serial) or '' ]]</barCode>
+		      									
+                						</td>
+									</tr>
+								</blockTable>
+							</place>
+	    				<rotate degrees="-90"/>     				
+	 				</pageGraphics>
+    		</pageTemplate>
+  		</template>
+		<stylesheet>
+    		<blockTableStyle id="Table">
+      			<blockAlignment value="CENTER"/>
+      			<blockValign value="TOP"/>
+      				<lineStyle kind="LINEBEFORE" colorName="black" start="0,0" stop="0,-1"/>
+      				<lineStyle kind="LINEABOVE" colorName="black" start="0,0" stop="0,0"/>
+      				<lineStyle kind="LINEBELOW" colorName="black" start="0,-1" stop="0,-1"/>
+      				<lineStyle kind="LINEBEFORE" colorName="black" start="1,0" stop="1,-1"/>
+      				<lineStyle kind="LINEABOVE" colorName="black" start="1,0" stop="1,0"/>
+      				<lineStyle kind="LINEBELOW" colorName="black" start="1,-1" stop="1,-1"/>
+      				<lineStyle kind="LINEBEFORE" colorName="black" start="2,0" stop="2,-1"/>
+      				<lineStyle kind="LINEABOVE" colorName="black" start="2,0" stop="2,0"/>
+      				<lineStyle kind="LINEBELOW" colorName="black" start="2,-1" stop="2,-1"/>
+      				<lineStyle kind="LINEBEFORE" colorName="black" start="3,0" stop="3,-1"/>
+     				<lineStyle kind="LINEAFTER" colorName="black" start="3,0" stop="3,-1"/>
+      				<lineStyle kind="LINEABOVE" colorName="black" start="3,0" stop="3,0"/>
+      				<lineStyle kind="LINEBELOW" colorName="black" start="3,-1" stop="3,-1"/>
+    		</blockTableStyle>
+    		<blockTableStyle id="Table1">
+      			<blockBackground colorName="black"/>
+      			<blockAlignment value="CENTER"/>
+      			<blockValign value="TOP"/>
+      				<lineStyle kind="LINEBEFORE" colorName="black" start="0,0" stop="0,-1"/>
+      				<lineStyle kind="LINEABOVE" colorName="black" start="0,0" stop="0,0"/>
+      				<lineStyle kind="LINEBELOW" colorName="black" start="0,-1" stop="0,-1"/>
+      				<lineStyle kind="LINEBEFORE" colorName="black" start="1,0" stop="1,-1"/>
+      				<lineStyle kind="LINEABOVE" colorName="black" start="1,0" stop="1,0"/>
+      				<lineStyle kind="LINEBELOW" colorName="black" start="1,-1" stop="1,-1"/>
+      				<lineStyle kind="LINEBEFORE" colorName="black" start="2,0" stop="2,-1"/>
+      				<lineStyle kind="LINEABOVE" colorName="black" start="2,0" stop="2,0"/>
+      				<lineStyle kind="LINEBELOW" colorName="black" start="2,-1" stop="2,-1"/>
+      				<lineStyle kind="LINEBEFORE" colorName="black" start="3,0" stop="3,-1"/>
+      				<lineStyle kind="LINEAFTER" colorName="black" start="3,0" stop="3,-1"/>
+      				<lineStyle kind="LINEABOVE" colorName="black" start="3,0" stop="3,0"/>
+      				<lineStyle kind="LINEBELOW" colorName="black" start="3,-1" stop="3,-1"/>
+    			</blockTableStyle>
+    		<initialize>
+      			<paraStyle name="all" alignment="justify"/>
+    		</initialize>
+			<paraStyle name="Header_Block" fontName="Helvetica-Bold" style="Field_value_center" textColor="white" alignment="CENTER" fontSize="12"/>
+			<paraStyle name="Loop_Block" fontName="Helvetica-Bold" fontSize="7" alignment="CENTER"/>
+			<paraStyle name="Field_name" fontName="Helvetica-Bold" fontSize="8" alignment="LEFT"/>
+			<paraStyle name="Field_value" fontName="Helvetica-Bold" fontSize="10" alignment="LEFT"/>
+			<paraStyle name="Field_value_center" fontName="Helvetica-Bold" fontSize="10" alignment="CENTER"/>
+  		</stylesheet>
+
+
+ 
+  <story>
+   	 <blockTable colWidths="0.7in,4.2in,0.7in">
+    	<tr>
+      		<td> 
+  	          <para></para>
+			</td>		
+			<td>
+	        	<blockTable colWidths="4.2in" style="Table1">
+      				<tr>
+        				<td>   
+                			<para style="Header_Block"><strong>CuBE Plastics™</strong></para>       
+        				</td>
+      				</tr>
+				</blockTable>
+
+				<blockTable colWidths="4.2in">
+      		 		<tr>
+                  		<td>
+       		      			<para style="Loop_Block">[[repeatIn(objects,'o')]]</para>
+		      				<blockTable colWidths="4.2in">
+      		       				<tr>
+                  					<td>
+
+       		      	 	
+										<blockTable colWidths="3.9in" style="Table">
+      				   						<tr>
+        			      						<td>
+          					
+													<para style="Field_value_center"><strong>Serial No :[[ (o.serial and o.serial) or '' ]]</strong></para>
+        			      						</td>
+      				  						</tr>
+
+   										</blockTable>				
+										<blockTable colWidths="1.95in,1.95in" style="Table">
+      				   						<tr>
+        			      						<td>
+          											<para style="Field_name"><strong>Current Date and Time  </strong></para>
+          											<para style="Field_value"><strong>[[ time.ctime().split()[1] ]] [[ time.ctime().split()[2] ]] [[ time.ctime().split()[4] ]] [[ time.ctime().split()[3] ]] </strong></para>
+        			      						</td>
+        									<td>
+         											<para style="Field_name"><strong>User</strong></para>
+          											<para style="Field_value"><strong>[[ user.name ]]</strong></para>
+        										</td>
+      				  						</tr>
+
+   										</blockTable>
+										<blockTable colWidths="1.95in,1.95in" style="Table">
+      				   						<tr>
+        			      						<td>
+						          					
+													<para style="Field_name"><strong>Product</strong></para>
+          											<para style="Field_value"><strong>[[ (o.product_name and o.product_name) or '' ]]</strong></para>
+        			      						</td>
+        										<td>
+         											<para style="Field_name"><strong>Quantity</strong></para>
+          											<para style="Field_value"><strong>[[ formatLang( o.product_qty)  or '' ]] [[ (o.product_uom and o.product_uom.name)]]</strong></para>
+        										</td>
+      				  						</tr>
+
+   										</blockTable>
+										<blockTable colWidths="1.95in,1.95in" style="Table">
+      				   						<tr>
+        			      						<td>
+						         					
+													<para style="Field_name"><strong>MO Ref</strong></para>
+          											<para style="Field_value"><strong>[[(o.mo_ref) or '' ]]</strong></para>
+        			      						</td>
+        										<td>
+         											<para style="Field_name"><strong>Machine</strong></para>
+          											<para style="Field_value"><strong>[[ (o.machine_name) or '' ]]</strong></para>
+        										</td>
+      				  						</tr>
+
+   										</blockTable>
+<!--				
+    									<blockTable colWidths="3.9in" style="Table">
+      				  						<tr>
+        			   							<td>
+            										<para style="Field_name"><strong></strong></para>
+            				  						<para style="Field_value"><strong>Destination: [[ (o.location_dest) or '' ]]</strong></para>
+        			    						</td>
+      				  						</tr>
+    									</blockTable>
+      									<blockTable colWidths="1.3in,1.3in,1.3in" style="Table">
+        									<tr>
+          										<td>
+            										<para style="Field_name"><strong>Corridor</strong> </para>
+              										<para style="Field_value_center"><strong></strong></para>
+          										</td>
+          										<td>
+            										<para style="Field_name"><strong>Shelves </strong></para>
+              										<para style="Field_value"><strong></strong></para>
+          										</td>
+          										<td>
+            										<para style="Field_name"><strong>Height </strong></para>
+              										<para style="Field_value"><strong></strong></para>
+          										</td>
+
+        									</tr>
+      									</blockTable>
+-->
+   										<blockTable colWidths="3.9in" style="Table">
+      										<tr>
+       			 								<td>
+             
+            										<para style="Field_name"><strong>Lot number of Raw Material</strong></para>
+              										<para style="Field_value"><strong>[[ (o.raw_material_serial) or '' ]]</strong></para>
+        										</td>
+      										</tr>
+   										</blockTable>
+   
+    									<blockTable colWidths="1.3in,1.3in,1.3in" style="Table">
+      										<tr>
+        										<td>
+              										<para style="Field_name"><strong>Supervisor</strong></para>
+              										<para style="Field_value">[[  ]]</para>
+
+        										</td>
+        										<td>
+            										<para style="Field_name"><strong>Shift</strong></para>
+              										<para style="Field_value"><strong>[[  ]]</strong></para>
+
+        										</td>
+        										<td>
+            										<para style="Field_name"><strong>Packer</strong></para>
+              										<para style="Field_value"><strong>[[  ]]</strong></para>
+
+        										</td>
+      										</tr>
+   									</blockTable>
+                                                                        <blockTable colWidths="3.9in" style="Table">
+      				  						<tr>
+        			   							<td>
+            										<para style="Field_name"><strong></strong></para>
+            				  						<para style="Field_value"><strong>Destination: [[ (o.location_dest) or '' ]]</strong></para>
+        			    						</td>
+      				  						</tr>
+    									</blockTable>
+      									<blockTable colWidths="1.3in,1.3in,1.3in" style="Table">
+        									<tr>
+          										<td>
+            										<para style="Field_name"><strong>Corridor</strong> </para>
+              										<para style="Field_value_center"><strong></strong></para>
+          										</td>
+          										<td>
+            										<para style="Field_name"><strong>Shelves </strong></para>
+              										<para style="Field_value"><strong></strong></para>
+          										</td>
+          										<td>
+            										<para style="Field_name"><strong>Height </strong></para>
+              										<para style="Field_value"><strong></strong></para>
+          										</td>
+
+        									</tr>
+      									</blockTable> 
+ 	 		     					</td>
+      		    				</tr>
+			   				</blockTable>
+				
+        				</td>
+      				</tr>
+				</blockTable>
+
+
+			</td>
+			<td>
+				<para></para>
+			</td>
+	    </tr>
+	  </blockTable>
+    </story>
+ 
+  
+  </document>

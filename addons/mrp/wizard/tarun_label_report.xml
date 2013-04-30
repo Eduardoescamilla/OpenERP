@@ -1,0 +1,13 @@
+<?xml version="1.0"?> 
+<openerp> 
+        <data> 
+                <report 
+                        id="tarun_report_label"
+			string="Large Label 3"
+			model="mrp.product.produce"
+			name="mrp.product.produce"
+			rml="mrp/wizard/tarun_label.rml"
+			auto="False"
+			header="False"/>
+        </data> 
+</openerp>

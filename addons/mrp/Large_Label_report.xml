@@ -1,0 +1,13 @@
+<?xml version="1.0"?> 
+<openerp> 
+        <data> 
+                <report 
+                        id="report_mrp_production_report_l"
+			string="Gaylord Label"
+			model="mrp.production"
+			name="mrp.production"
+			rml="mrp/report/Large_Label.rml"
+			auto="False"
+			header="False"/>
+        </data> 
+</openerp>

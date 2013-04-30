@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<document filename="Large_Label.pdf">
+<!--
+  <template pageSize="(595.0,842.0)" title="Large_Label" author="PMI India (sales@primarymodules.com)" allowSplitting="20">
+-->
+  <template pageSize="(6in,4in)" title="Large_Label" author="PMI India (sales@primarymodules.com)" allowSplitting="20">
+    <pageTemplate id="first">
+<!--
+      <frame id="first" x1="34.0" y1="42.0" width="527" height="758"/>
+-->
+      <frame id="first" x1="5.0" y1="0.0" width="5.8in" height="4in"/>
+    </pageTemplate>
+  </template>
+
+  <stylesheet>
+    <blockTableStyle id="Table">
+      <blockAlignment value="CENTER"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEBEFORE" colorName="black" start="0,0" stop="0,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="black" start="0,0" stop="0,0"/>
+      <lineStyle kind="LINEBELOW" colorName="black" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="black" start="1,0" stop="1,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="black" start="1,0" stop="1,0"/>
+      <lineStyle kind="LINEBELOW" colorName="black" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="black" start="2,0" stop="2,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="black" start="2,0" stop="2,0"/>
+      <lineStyle kind="LINEBELOW" colorName="black" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="black" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="black" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="black" start="3,0" stop="3,0"/>
+      <lineStyle kind="LINEBELOW" colorName="black" start="3,-1" stop="3,-1"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table1">
+      <blockBackground colorName="black"/>
+      <blockAlignment value="CENTER"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEBEFORE" colorName="black" start="0,0" stop="0,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="black" start="0,0" stop="0,0"/>
+      <lineStyle kind="LINEBELOW" colorName="black" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="black" start="1,0" stop="1,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="black" start="1,0" stop="1,0"/>
+      <lineStyle kind="LINEBELOW" colorName="black" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="black" start="2,0" stop="2,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="black" start="2,0" stop="2,0"/>
+      <lineStyle kind="LINEBELOW" colorName="black" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="black" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="black" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="black" start="3,0" stop="3,0"/>
+      <lineStyle kind="LINEBELOW" colorName="black" start="3,-1" stop="3,-1"/>
+    </blockTableStyle>
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+  </stylesheet>
+  <story>
+
+    <para fontName="Times-Roman" fontSize="7" alignment="CENTER">[[repeatIn(objects,'o')]] </para>
+
+    <section>
+
+        <para fontName="Times-Roman" fontSize="7" alignment="CENTER">[[ repeatIn(o.move_created_ids2,'line2') ]]</para>
+    <section>
+        <para fontName="Times-Roman" fontSize="7" alignment="CENTER">[[ repeatIn(o.workcenter_lines,'mac') ]]</para>
+
+        <blockTable colWidths="5.1in">
+	  <tr>
+	    <td>
+
+        <blockTable colWidths="5.1in" style="Table1">
+	  <tr>
+	    <td>	
+                <para fontName="Times-Roman" fontSize="12" alignment="CENTER" textColor="white"><strong>CuBE Plastics™</strong></para>		
+	    </td>
+	  </tr>
+        </blockTable>
+
+    <blockTable colWidths="5.1in" style="Table">
+	  <tr alignment="CENTER">
+	    <td alignment="CENTER">
+	    <para fontName="Times-Roman" fontSize="12" alignment="CENTER"><strong>Serial No : [[ (line2.prodlot_id.name and line2.prodlot_id.name) ]]</strong></para>
+	    <para fontName="Times-Roman" fontSize="12" alignment="CENTER"><strong> </strong></para>
+	    <barCode code="code128" quiet="9" fontName="Times-Roman" fontSize="100" alignment="CENTER" barHeight="30.0" barWidth="2.0">[[ (line2.prodlot_id.name and line2.prodlot_id.name) ]]</barCode>
+          
+	    </td>
+	  </tr>
+        </blockTable>
+
+
+    <blockTable colWidths="1.7in,1.7in,1.7in" style="Table">
+      <tr>
+        <td>
+<!--
+          <para fontName="Times-Roman" fontSize="7" alignment="LEFT">Time </para>
+          <para fontName="Times-Roman" fontSize="12" alignment="LEFT">[[ o.date_finished ]]</para>
+-->
+          <para fontName="Times-Roman" fontSize="7" alignment="LEFT"><strong>Current Date and Time</strong></para>
+          <para fontName="Times-Roman" fontSize="12" alignment="LEFT"><strong>[[ time.ctime().split()[1] ]] [[ time.ctime().split()[2] ]] [[ time.ctime().split()[4] ]] [[ time.ctime().split()[3] ]]</strong></para>
+        </td>
+        <td>
+          <para fontName="Times-Roman" fontSize="7" alignment="LEFT"><strong>User </strong></para>
+          <para fontName="Times-Roman" fontSize="12" alignment="LEFT"><strong>[[ user.name ]] </strong></para>
+        </td>
+        <td>
+          <para fontName="Times-Roman" fontSize="7" alignment="LEFT"><strong>MO Ref </strong></para>
+              <para fontName="Times-Roman" fontSize="12" alignment="LEFT"><strong>[[(o.name) ]]</strong></para>
+        </td>
+      </tr>
+   </blockTable>
+
+
+    <blockTable colWidths="1.7in,1.7in,1.7in" style="Table">
+      <tr>
+        <td>
+              <para fontName="Times-Roman" fontSize="7" alignment="LEFT"><strong>Product</strong> </para>
+              <para fontName="Times-Roman" fontSize="12" alignment="LEFT"><strong>[[ (line2.product_id and line2.product_id.code) ]] [[ (line2.product_id and line2.product_id.name) ]]</strong></para>
+        </td>
+        <td>
+            <para fontName="Times-Roman" fontSize="7" alignment="LEFT"><strong>Quantity</strong> </para>
+              <para fontName="Times-Roman" fontSize="12" alignment="LEFT"><strong>[[ formatLang( line2.product_qty) ]] [[ (line2.product_uom and line2.product_uom.name)]]</strong> </para>
+        </td>
+	 <td>
+          <para fontName="Times-Roman" fontSize="7" alignment="LEFT"><strong>Machine </strong></para>
+              <para fontName="Times-Roman" fontSize="12" alignment="LEFT"><strong>[[ (mac.workcenter_id and mac.workcenter_id.name) ]]</strong></para>
+        </td>
+      </tr>
+   </blockTable>
+<!--
+	<blockTable colWidths="5.1in" style="Table">
+	  <tr>
+	    <td>
+            <para fontName="Times-Roman" fontSize="12" alignment="LEFT"><strong>Destination: [[(line2.location_dest_id and line2.location_dest_id.complete_name) ]] </strong></para>
+	    </td>
+	  </tr>
+	</blockTable>
+
+      <blockTable colWidths="1.7in,1.7in,1.7in" style="Table">
+        <tr>
+          <td>
+            <para fontName="Times-Roman" fontSize="7" alignment="LEFT"><strong>Corridor </strong></para>
+              <para fontName="Times-Roman" fontSize="12" alignment="CENTER"><strong>[[(line2.location_dest_id and line2.location_dest_id.posx) ]]</strong></para>
+          </td>
+          <td>
+            <para fontName="Times-Roman" fontSize="7" alignment="LEFT"><strong>Shelves</strong></para>
+              <para fontName="Times-Roman" fontSize="12" alignment="LEFT"><strong>[[(line2.location_dest_id and line2.location_dest_id.posy) ]]</strong></para>
+          </td>
+          <td>
+            <para fontName="Times-Roman" fontSize="7" alignment="LEFT"><strong>Height</strong></para>
+              <para fontName="Times-Roman" fontSize="12" alignment="LEFT">[[(line2.location_dest_id and line2.location_dest_id.posz) ]]</para>
+          </td>
+
+        </tr>
+      </blockTable>
+-->
+    <blockTable colWidths="5.1in" style="Table">
+      <tr>
+        <td>
+              
+            <para fontName="Times-Roman" fontSize="7" alignment="LEFT"><strong>Lot number of Raw Material</strong></para>
+              <para fontName="Times-Roman" fontSize="12" alignment="LEFT"><strong>[[ (o.raw_material_serial)]]</strong></para>
+        </td>
+      </tr>
+   </blockTable>
+    <blockTable colWidths="1.7in,1.7in,1.7in" style="Table">
+      <tr>
+        <td>
+              <para fontName="Times-Roman" fontSize="7" alignment="LEFT"><strong>Supervisor</strong></para>
+              <para fontName="Times-Roman" fontSize="12" alignment="LEFT"> [[  ]] </para>
+
+        </td>
+	 <td>
+              
+            <para fontName="Times-Roman" fontSize="7" alignment="LEFT"><strong>Shift</strong></para>
+              <para fontName="Times-Roman" fontSize="12" alignment="LEFT">  </para>
+        </td>
+        <td>
+            <para fontName="Times-Roman" fontSize="7" alignment="LEFT"><strong>Packer</strong></para>
+              <para fontName="Times-Roman" fontSize="12" alignment="LEFT"> [[  ]] </para>
+
+        </td>
+      </tr>
+   </blockTable>
+   <blockTable colWidths="5.1in" style="Table">
+	  <tr>
+	    <td>
+            <para fontName="Times-Roman" fontSize="12" alignment="LEFT"><strong>Destination: [[(line2.location_dest_id and line2.location_dest_id.complete_name) ]] </strong></para>
+	    </td>
+	  </tr>
+	</blockTable>
+
+      <blockTable colWidths="1.7in,1.7in,1.7in" style="Table">
+        <tr>
+          <td>
+            <para fontName="Times-Roman" fontSize="8" alignment="LEFT"><strong>Corridor </strong></para>
+              <para fontName="Times-Roman" fontSize="12" alignment="CENTER"><strong>[[(line2.location_dest_id and line2.location_dest_id.posx) ]]</strong></para>
+          </td>
+          <td>
+            <para fontName="Times-Roman" fontSize="8" alignment="LEFT"><strong>Shelves</strong></para>
+              <para fontName="Times-Roman" fontSize="12" alignment="LEFT"><strong>[[(line2.location_dest_id and line2.location_dest_id.posy) ]]</strong></para>
+          </td>
+          <td>
+            <para fontName="Times-Roman" fontSize="8" alignment="LEFT"><strong>Height</strong></para>
+              <para fontName="Times-Roman" fontSize="12" alignment="LEFT">[[(line2.location_dest_id and line2.location_dest_id.posz) ]]</para>
+          </td>
+
+        </tr>
+      </blockTable>
+
+	    </td>
+	  </tr>
+        </blockTable>
+<!--
+               <para fontName="Times-Roman" fontSize="12" alignment="CENTER"><strong>        </strong></para>     
+               <para fontName="Times-Roman" fontSize="6" alignment="CENTER"><font color="grey"> ______________________________________________________________________________________________________tear along this______________________________________________________________________________________________________</font></para>
+               <para fontName="Times-Roman" fontSize="12" alignment="CENTER"><strong>        </strong></para>
+-->
+ </section>
+    </section>
+
+  </story>
+</document>
